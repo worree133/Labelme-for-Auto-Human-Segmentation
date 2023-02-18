@@ -143,5 +143,4 @@ def MatteFormer(image_path, trimap):
     _al = cv2.cvtColor(alpha_pred, cv2.COLOR_GRAY2RGB)
     h, w, c = _al.shape
 
-    cv2.imwrite('final.jpg', _al)
     return _al.astype(np.uint8)
