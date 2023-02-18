@@ -1,0 +1,17 @@
+docopt==0.6.2
+matplotlib==3.3.4
+numpy==1.19.5
+opencv_python==4.6.0.66
+scikit-image==0.17.2
+scipy==1.5.4
+setuptools==58.0.4
+termcolor==1.1.0
+tqdm==4.64.0
+xmltodict==0.13.0
+toml
+shapely
+easydict
+PyQt5
+torch
+timm
+python 3.6
