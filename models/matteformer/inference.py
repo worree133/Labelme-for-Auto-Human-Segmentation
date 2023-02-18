@@ -134,11 +134,8 @@ def MatteFormer(image_path, trimap):
     # inference
     model = model.eval()
 
-
     image_dict = generator_tensor_dict(image_path, trimap)
     alpha_pred = single_inference(model, image_dict, checkcuda)
-
-    # save images
 
     _al = cv2.cvtColor(alpha_pred, cv2.COLOR_GRAY2RGB)
     h, w, c = _al.shape
