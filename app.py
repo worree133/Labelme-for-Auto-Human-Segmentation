@@ -1490,129 +1490,6 @@ class MainWindow(QtWidgets.QMainWindow):
                 self.canvas.undoLastLine()
                 self.canvas.shapesBackups.pop()
 
-
-
-    def loadFile2(self, filename=None):
-        """Load the specified file, or the last opened file if None."""
-        # changing fileListWidget loads file
-
-
-        filename = str(filename)
-        self.canvas.getFilename(filename)
-
-        # assumes same name, but json extension
-        self.status(
-            str(self.tr("Loading %s...")) % osp.basename(str(filename))
-        )
-        label_file = osp.splitext(filename)[0] + ".json"
-
-        if QtCore.QFile.exists(label_file) and LabelFile.is_label_file(
-            label_file
-        ):
-            try:
-                self.labelFile = LabelFile(label_file)
-            except LabelFileError as e:
-                self.errorMessage(
-                    self.tr("Error opening file"),
-                    self.tr(
-                        "<p><b>%s</b></p>"
-                        "<p>Make sure <i>%s</i> is a valid label file."
-                    )
-                    % (e, label_file),
-                )
-                self.status(self.tr("Error reading %s") % label_file)
-                return False
-            self.imageData = self.labelFile.imageData
-            self.imagePath = osp.join(
-                osp.dirname(label_file),
-                self.labelFile.imagePath,
-            )
-            self.otherData = self.labelFile.otherData
-        else:
-            self.imageData = LabelFile.load_image_file(filename)
-            if self.imageData:
-                self.imagePath = filename
-            self.labelFile = None
-        image = QtGui.QImage.fromData(self.imageData)
-
-        if image.isNull():
-            formats = [
-                "*.{}".format(fmt.data().decode())
-                for fmt in QtGui.QImageReader.supportedImageFormats()
-            ]
-            self.errorMessage(
-                self.tr("Error opening file"),
-                self.tr(
-                    "<p>Make sure <i>{0}</i> is a valid image file.<br/>"
-                    "Supported image formats: {1}</p>"
-                ).format(filename, ",".join(formats)),
-            )
-            self.status(self.tr("Error reading %s") % filename)
-            return False
-
-        self.image = image
-        self.filename = filename
-        if self._config["keep_prev"]:
-            prev_shapes = self.canvas.shapes
-        self.canvas.loadPixmap(QtGui.QPixmap.fromImage(image))
-        flags = {k: False for k in self._config["flags"] or []}
-        if self.labelFile:
-            self.loadLabels(self.labelFile.shapes)
-            if self.labelFile.flags is not None:
-                flags.update(self.labelFile.flags)
-        self.loadFlags(flags)
-        if self._config["keep_prev"] and self.noShapes():
-            self.loadShapes(prev_shapes, replace=False)
-            self.setDirty()
-        else:
-
-            self.setClean()
-        self.canvas.setEnabled(True)
-        # set zoom values
-        is_initial_load = not self.zoom_values
-        if self.filename in self.zoom_values:
-            self.zoomMode = self.zoom_values[self.filename][0]
-            self.setZoom(self.zoom_values[self.filename][1])
-        elif is_initial_load or not self._config["keep_prev_scale"]:
-            self.adjustScale(initial=True)
-        # set scroll values
-        for orientation in self.scroll_values:
-            if self.filename in self.scroll_values[orientation]:
-                self.setScroll(
-                    orientation, self.scroll_values[orientation][self.filename]
-                )
-        # set brightness contrast values
-        dialog = BrightnessContrastDialog(
-            utils.img_data_to_pil(self.imageData),
-            self.onNewBrightnessContrast,
-            parent=self,
-        )
-        brightness, contrast = self.brightnessContrast_values.get(
-            self.filename, (None, None)
-        )
-        if self._config["keep_prev_brightness"] and self.recentFiles:
-            brightness, _ = self.brightnessContrast_values.get(
-                self.recentFiles[0], (None, None)
-            )
-        if self._config["keep_prev_contrast"] and self.recentFiles:
-            _, contrast = self.brightnessContrast_values.get(
-                self.recentFiles[0], (None, None)
-            )
-        if brightness is not None:
-            dialog.slider_brightness.setValue(brightness)
-        if contrast is not None:
-            dialog.slider_contrast.setValue(contrast)
-        self.brightnessContrast_values[self.filename] = (brightness, contrast)
-        if brightness is not None or contrast is not None:
-            dialog.onNewValue(None)
-        self.paintCanvas()
-        self.addRecentFile(self.filename)
-        self.toggleActions(True)
-        self.canvas.setFocus()
-        self.status(str(self.tr("Loaded %s")) % osp.basename(str(filename)))
-        return True
-
-
     def scrollRequest(self, delta, orientation):
         units = -delta * 0.1  # natural scroll
         bar = self.scrollBars[orientation]
@@ -2363,7 +2240,6 @@ class MainWindow(QtWidgets.QMainWindow):
                 self.createdRect = True
                 self.actions.undo.setEnabled(True)
 
-            #self.trimap.close_button.clicked.connect(MatteFormer(filename,self.trimap.view.foreground_item.m_pixmap))
             self.trimap.close_button.clicked.connect(loadtrimap)
             self.trimap.show()
 
