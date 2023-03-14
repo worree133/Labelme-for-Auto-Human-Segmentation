@@ -1,4 +1,4 @@
-# Labelme-for-human-segmentation
+# Labelme-for-Auto-Human-Segmentation
 
 ## Features
 
