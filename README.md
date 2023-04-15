@@ -13,7 +13,6 @@
 ## Installation
 
 ```bash
-# python3 version 3.6
 git clone https://github.com/worree133/Labelme-for-Auto-Human-Segmentation.git
 cd labelme
 python setup.py build
