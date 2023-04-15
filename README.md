@@ -42,3 +42,6 @@ The sample info.txt can be checked in the source code.
 ## Acknowledgement
 
 This repo is the fork of [wkentaro/labelme](https://github.com/wkentaro/labelme).
+The models used:
+- P3M-Net [JizhiziLi/P3M] (https://github.com/JizhiziLi/P3M/tree/master/core)
+- MatteFormer [webtoon/matteformer](https://github.com/webtoon/matteformer)
