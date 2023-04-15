@@ -12,17 +12,12 @@
 
 ## Installation
 
-### Anaconda
-
-First, you need to download the official labelme.
-
-You need install [Anaconda](https://www.continuum.io/downloads), then run below:
-
 ```bash
 # python3 version 3.6
-conda create --name=labelme python=3
-source activate labelme
-pip install labelme
+git clone https://github.com/worree133/Labelme-for-Auto-Human-Segmentation.git
+cd labelme
+python setup.py build
+pip install .
 ```
 
 Then, download the source code.
