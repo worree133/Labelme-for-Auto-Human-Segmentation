@@ -7,7 +7,7 @@
 ## Requirements
 
 - Ubuntu / macOS / Windows
-- Python3.6
+- Python2 / Python3
 - PyQt5
 
 ## Installation
