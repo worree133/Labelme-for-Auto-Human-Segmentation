@@ -1,5 +1,19 @@
 # Labelme-for-Auto-Human-Segmentation
 
+<h1 align="center">
+  <img src="labelme/icons/icon.png"><br/>Smart LabelMe
+</h1>
+
+<h4 align="center">
+  Video / Image Annotation (Polygon, Semantic mask, Classification) with Python
+</h4>
+
+<br/>
+
+<div align="center">
+  <img src="resources/SemanticSegmentation.png" width="70%">
+</div>
+
 ## Features
 
 - [x] Auto-contouring for human segmentation
@@ -24,6 +38,15 @@ Create a info.txt in your current working directory to decide the label name.
 In the info.txt, just type the label name of background in the first row and label name of foreground in the second row.
 
 The sample info.txt can be checked in the source code.
+
+## Usage
+
+Run `human_labelme --help` for detail.  
+The annotations are saved as a [JSON](http://www.json.org/) file.
+
+```bash
+human_labelme  # just open gui
+```
 
 ## Acknowledgement
 
