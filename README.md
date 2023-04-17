@@ -2,10 +2,6 @@
   <img src="labelme/icons/icon.png"><br/>Labelme for Auto Human Segmentation
 </h1>
 
-<h4 align="center">
-  Video / Image Annotation (Polygon, Semantic mask, Classification) with Python
-</h4>
-
 <br/>
 
 <div align="center">
