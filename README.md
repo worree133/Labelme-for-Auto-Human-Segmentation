@@ -1,7 +1,5 @@
-# Labelme-for-Auto-Human-Segmentation
-
 <h1 align="center">
-  <img src="labelme/icons/icon.png"><br/>Smart LabelMe
+  <img src="labelme/icons/icon.png"><br/>Labelme for Auto Human Segmentation
 </h1>
 
 <h4 align="center">
