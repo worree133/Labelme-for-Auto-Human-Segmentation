@@ -30,6 +30,7 @@ cd labelme
 python setup.py build
 pip install .
 ```
+Download the pretrained model from [P3M-Net](https://drive.google.com/uc?export=download&id=1smX2YQGIpzKbfwDYHAwete00a_YMwoG1) and [MatteFormer](https://drive.google.com/file/d/1AU7uM1dtYjEhtOa_9OGfoQUE-tmW9mX5/view?usp=sharing).
 
 Create a info.txt in your current working directory to decide the label name.
 
