@@ -40,7 +40,7 @@ The sample info.txt can be checked in the source code.
 
 ## Usage
 
-Run `human_labelme --help` for detail.  
+Run `hs_labelme --help` for detail.  
 The annotations are saved as a [JSON](http://www.json.org/) file.
 
 ```bash
