@@ -11,10 +11,10 @@
 ## Features
 
 - [x] Auto-contouring for human segmentation
-- [x] Video annotation. ([video annotation](examples/video_annotation))
+- [x] Video annotation.
 - [x] GUI customization (predefined labels / flags, auto-saving, label validation, etc). ([#144](https://github.com/wkentaro/labelme/pull/144))
-- [x] Exporting VOC-format dataset for semantic/instance segmentation. ([semantic segmentation](examples/semantic_segmentation), [instance segmentation](examples/instance_segmentation))
-- [x] Exporting COCO-format dataset for instance segmentation. ([instance segmentation](examples/instance_segmentation))
+- [x] Exporting VOC-format dataset for semantic/instance segmentation.
+- [x] Exporting COCO-format dataset for instance segmentation.
 
 ## Requirements
 
