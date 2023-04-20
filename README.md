@@ -53,3 +53,4 @@ This repo is the fork of [wkentaro/labelme](https://github.com/wkentaro/labelme)
 The models used are from:
 - P3M-Net [JizhiziLi/P3M](https://github.com/JizhiziLi/P3M/tree/master/core)
 - MatteFormer [webtoon/matteformer](https://github.com/webtoon/matteformer)
+- U<sup>2</sup>-Net [xuebinqin/U-2-Net](https://github.com/xuebinqin/U-2-Net)
