@@ -50,6 +50,6 @@ human_labelme  # just open gui
 ## Acknowledgement
 
 This repo is the fork of [wkentaro/labelme](https://github.com/wkentaro/labelme).
-The models used:
+The models used are from:
 - P3M-Net [JizhiziLi/P3M](https://github.com/JizhiziLi/P3M/tree/master/core)
 - MatteFormer [webtoon/matteformer](https://github.com/webtoon/matteformer)
