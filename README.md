@@ -1,12 +1,6 @@
-# Labelme-for-Auto-Human-Segmentation
-
 <h1 align="center">
-  <img src="labelme/icons/icon.png"><br/>Smart LabelMe
+  <img src="labelme/icons/icon.png"><br/>Labelme for Auto Human Segmentation
 </h1>
-
-<h4 align="center">
-  Video / Image Annotation (Polygon, Semantic mask, Classification) with Python
-</h4>
 
 <br/>
 
@@ -36,6 +30,7 @@ cd labelme
 python setup.py build
 pip install .
 ```
+Download the pretrained model from [P3M-Net](https://drive.google.com/uc?export=download&id=1smX2YQGIpzKbfwDYHAwete00a_YMwoG1) and [MatteFormer](https://drive.google.com/file/d/1AU7uM1dtYjEhtOa_9OGfoQUE-tmW9mX5/view?usp=sharing).
 
 Create a info.txt in your current working directory to decide the label name.
 
@@ -55,6 +50,7 @@ human_labelme  # just open gui
 ## Acknowledgement
 
 This repo is the fork of [wkentaro/labelme](https://github.com/wkentaro/labelme).
-The models used:
+The models used are from:
 - P3M-Net [JizhiziLi/P3M](https://github.com/JizhiziLi/P3M/tree/master/core)
 - MatteFormer [webtoon/matteformer](https://github.com/webtoon/matteformer)
+- U2Net [xuebinqin/U-2-Net](https://github.com/xuebinqin/U-2-Net)
