@@ -44,7 +44,7 @@ Run `human_labelme --help` for detail.
 The annotations are saved as a [JSON](http://www.json.org/) file.
 
 ```bash
-human_labelme  # just open gui
+hs_labelme  # just open gui
 ```
 
 ## Acknowledgement
