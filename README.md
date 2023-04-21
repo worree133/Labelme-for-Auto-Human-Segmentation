@@ -11,7 +11,8 @@ It supports some AI-assisted labeling features for human segmentation.
 It is written in Python and uses Qt for its graphical interface.
 
 
-<i>The first function "Model: P3M-Net" can label the human automatically</i>
+<i>The first function "Model: P3M-Net" can label the human automatically
+</i>
 <img src="resources/demo1.gif" width="50%" />   
 
 
