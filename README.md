@@ -11,10 +11,10 @@
 ## Features
 
 - [x] Auto-contouring for human segmentation
-- [x] Video annotation. ([video annotation](examples/video_annotation))
+- [x] Video annotation.
 - [x] GUI customization (predefined labels / flags, auto-saving, label validation, etc). ([#144](https://github.com/wkentaro/labelme/pull/144))
-- [x] Exporting VOC-format dataset for semantic/instance segmentation. ([semantic segmentation](examples/semantic_segmentation), [instance segmentation](examples/instance_segmentation))
-- [x] Exporting COCO-format dataset for instance segmentation. ([instance segmentation](examples/instance_segmentation))
+- [x] Exporting VOC-format dataset for semantic/instance segmentation.
+- [x] Exporting COCO-format dataset for instance segmentation.
 
 ## Requirements
 
@@ -32,6 +32,8 @@ pip install .
 ```
 Download the pretrained model from [P3M-Net](https://drive.google.com/uc?export=download&id=1smX2YQGIpzKbfwDYHAwete00a_YMwoG1) and [MatteFormer](https://drive.google.com/file/d/1AU7uM1dtYjEhtOa_9OGfoQUE-tmW9mX5/view?usp=sharing).
 
+Put the pretrained models to models/pretrained_models/
+
 Create a info.txt in your current working directory to decide the label name.
 
 In the info.txt, just type the label name of background in the first row and label name of foreground in the second row.
@@ -40,11 +42,11 @@ The sample info.txt can be checked in the source code.
 
 ## Usage
 
-Run `human_labelme --help` for detail.  
+Run `hs_labelme --help` for detail.  
 The annotations are saved as a [JSON](http://www.json.org/) file.
 
 ```bash
-human_labelme  # just open gui
+hs_labelme  # just open gui
 ```
 
 ## Acknowledgement
