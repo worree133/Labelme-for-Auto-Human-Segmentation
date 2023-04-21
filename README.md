@@ -19,7 +19,7 @@ It is written in Python and uses Qt for its graphical interface.
 <br /> 
 <img src="resources/demo2.gif" width="70%" />  
 <br /> 
-<i>The third function "Threshold Setting" can adjust the labeling boundary.</i>
+<i>The third function "Threshold Setting" can adjust the labeling boundary after using the first or second functions.</i>
 <img src="resources/demo3.gif" width="70%" />  
 <br /> 
 <i>The fourth function "Replace Linestrip" can correct the labeling. Press Enter to confirm the corrected part.</i>
