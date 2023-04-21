@@ -1,12 +1,24 @@
 <h1 align="center">
-  <img src="labelme/icons/icon.png"><br/>Labelme for Auto Human Segmentation
+  <img src="labelme/icons/icon.png"><br/>HS-Labelme
 </h1>
 
 <br/>
 
-<div align="center">
-  <img src="resources/SemanticSegmentation.png" width="70%">
-</div>
+## Description
+
+HS-Labelme is a graphical image annotation tool for various image annotation needs such as classification, semantic segmentation, polygonal rois etc.  
+It support some smart features like annotation tracking, auto contouring etc. to speed up annotation task.
+It is written in Python and uses Qt for its graphical interface.
+
+<i>Auto contouring feature using OpenCV grab cut</i>
+<img src="resources/demo1.gif" width="70%" />   
+
+<i>Auto tracking of polygons between frames</i>
+<img src="resources/demo2.gif" width="70%" />  
+
+<img src="resources/demo3.gif" width="70%" />  
+
+<img src="resources/demo4.gif" width="70%" />  
 
 ## Features
 
