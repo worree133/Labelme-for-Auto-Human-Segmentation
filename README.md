@@ -8,8 +8,9 @@
 
 HS-Labelme is a graphical image annotation tool based on [labelme](https://github.com/wkentaro/labelme).
 It supports some AI-assisted labeling features for human segmentation.
+All the functions support Undo with Ctrl+Z
 It is written in Python and uses Qt for its graphical interface.
-
+<br /> 
 
 <i>The first function "Model: P3M-Net" can label the human automatically<br /></i>
 <img src="resources/demo1.gif" width="50%" />   
