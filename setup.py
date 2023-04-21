@@ -23,7 +23,7 @@ def get_version():
 
 def get_install_requires():
     install_requires = [
-        "einops"
+        "einops",
         "imgviz>=0.11",
         "matplotlib",
         "natsort>=7.1.0",
