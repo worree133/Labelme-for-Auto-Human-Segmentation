@@ -16,6 +16,7 @@ It is written in Python and uses Qt for its graphical interface.
 <img src="resources/demo1.gif" width="50%" />   
 <br /> 
 <i>The second function "Model: MatteFormer" can label different objects after the user draws trimaps. After drawing the gray part, right click the center area to fill it with white color.</i>
+<br /> 
 <img src="resources/demo2.gif" width="70%" />  
 <br /> 
 <i>The third function "Threshold Setting" can adjust the labeling boundary.</i>
