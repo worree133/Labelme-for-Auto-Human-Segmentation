@@ -42,7 +42,7 @@ It is written in Python and uses Qt for its graphical interface.
 
 ```bash
 git clone https://github.com/worree133/Labelme-for-Auto-Human-Segmentation.git
-cd labelme
+cd Labelme-for-Auto-Human-Segmentation
 python setup.py build
 pip install .
 ```
