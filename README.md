@@ -6,18 +6,20 @@
 
 ## Description
 
-HS-Labelme is a graphical image annotation tool for various image annotation needs such as classification, semantic segmentation, polygonal rois etc.  
-It support some smart features like annotation tracking, auto contouring etc. to speed up annotation task.
+HS-Labelme is a graphical image annotation tool based on [labelme](https://github.com/wkentaro/labelme).
+It supports some AI-assisted labeling features for human segmentation.
 It is written in Python and uses Qt for its graphical interface.
 
-<i>Auto contouring feature using OpenCV grab cut</i>
+<i>The first function "Model: P3M-Net" can label the human automatically</i>
 <img src="resources/demo1.gif" width="70%" />   
 
-<i>Auto tracking of polygons between frames</i>
+<i>The second function "Model: MatteFormer" can label different objects after the user draws trimaps</i>
 <img src="resources/demo2.gif" width="70%" />  
 
+<i>The third function "Threshold Setting" can adjust the labeling boundary</i>
 <img src="resources/demo3.gif" width="70%" />  
 
+<i>The fourth function "Replace Linestrip" can correct the labeling. Press Enter to confirm the corrected part</i>
 <img src="resources/demo4.gif" width="70%" />  
 
 ## Features
