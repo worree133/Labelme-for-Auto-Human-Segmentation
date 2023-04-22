@@ -125,9 +125,9 @@ def MatteFormer(image, trimap):
     checkcuda = torch.cuda.is_available()
     if checkcuda is True:
         model.cuda()
-        checkpoint = torch.load(os.path.join(path, 'pretrained_models/Matteformer.pth'))
+        checkpoint = torch.load(os.path.join(path, 'pretrained_models/best_model.pth'))
     else:
-        checkpoint = torch.load(os.path.join(path, 'pretrained_models/Matteformer.pth'), map_location=torch.device('cpu'))
+        checkpoint = torch.load(os.path.join(path, 'pretrained_models/best_model.pth'), map_location=torch.device('cpu'))
     # load checkpoint
 
     model.load_state_dict(utils.remove_prefix_state_dict(checkpoint['state_dict']), strict=True)
