@@ -36,7 +36,7 @@ It is written in Python and uses Qt for its graphical interface.
 ## Requirements
 
 - Ubuntu / macOS / Windows
-- Python3
+- Python3.7/3.8/3.9/3.10
 - PyQt5
 
 ## Installation
