@@ -7,9 +7,9 @@ from PIL import Image, ImageQt
 import torch
 from torch.nn import functional as F
 
-from labelme.models.matteformer.utils import *
+import labelme.models.matteformer.utils as utils
 from labelme.models.matteformer.utils import CONFIG
-from labelme.models.matteformer.networks import *
+import labelme.models.matteformer.networks as networks
 from pathlib import Path
 path = Path(__file__).parents[1]
 
