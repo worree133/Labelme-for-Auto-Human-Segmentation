@@ -62,7 +62,7 @@ def inference_img_p3m(model, img):
 
 def loadVitae(img):
 
-    model_path = os.path.join(path,'pretrained_models/p3mnet_pretrained_on_p3m10k.pth')
+    model_path = os.path.join(path,'pretrained_models/P3M-Net_ViTAE-S_trained_on_P3M-10k.pth')
     img = ImageQt.fromqpixmap(img)
     img = np.array(img)[:, :, :3]
     ### build model
