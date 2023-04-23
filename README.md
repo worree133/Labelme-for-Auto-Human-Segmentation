@@ -67,6 +67,6 @@ hs_labelme  # just open gui
 
 This repo is the fork of [wkentaro/labelme](https://github.com/wkentaro/labelme).
 The models used are from:
-- P3M-Net [JizhiziLi/P3M](https://github.com/JizhiziLi/P3M/tree/master/core)
+- P3M-Net [ViTAE-Transformer/P3M-Net](https://github.com/ViTAE-Transformer/p3m-net)
 - MatteFormer [webtoon/matteformer](https://github.com/webtoon/matteformer)
 - U2Net [xuebinqin/U-2-Net](https://github.com/xuebinqin/U-2-Net)
