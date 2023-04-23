@@ -105,7 +105,6 @@ class LabelFile(object):
                 )
 
             if data["imageData"] is not None:
-                print('loaded')
                 imageData = base64.b64decode(data["imageData"])
                 if PY2 and QT4:
                     imageData = utils.img_data_to_png_data(imageData)
