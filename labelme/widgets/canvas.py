@@ -718,7 +718,7 @@ class Canvas(QtWidgets.QWidget):
 
         x1, y1, x2, y2 = self.checkpoints(pt1,pt2)
         self.pointsave = [[x1,y1],[x2,y2]]
-        mattingsave = pixmap.copy(x1, y1, abs(x2 - x1), abs(y2 - y1))
+        mattingsave = pixmap.copy(int(x1), int(y1), int(abs(x2 - x1)), int(abs(y2 - y1)))
         mattingsave = loadVitae(mattingsave)
         self.mattingdict[self.groupid] = mattingsave
         self.lastsave = self.setthreshold(mattingsave)
@@ -732,7 +732,7 @@ class Canvas(QtWidgets.QWidget):
         x1, y1, x2, y2 = self.checkpoints(pt1,pt2)
 
         self.pointsave = [[x1,y1],[x2,y2]]
-        self.cropimage = pixmap.copy(x1, y1, abs(x2 - x1), abs(y2 - y1))
+        self.cropimage = pixmap.copy(int(x1), int(y1), int(abs(x2 - x1)), int(abs(y2 - y1)))
         self.cropimage = self.cropimage.toImage()
 
     def setpoint(self, pt1, pt2):
