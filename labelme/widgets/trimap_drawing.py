@@ -46,8 +46,8 @@ class LayerItem(QtWidgets.QGraphicsRectItem):
 
     def fill(self, pos):
 
-        x = pos.x()
-        y = pos.y()
+        x = int(pos.x())
+        y = int(pos.y())
 
         # Get our target color from origin.
 
