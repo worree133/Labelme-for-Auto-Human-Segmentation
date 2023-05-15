@@ -1,12 +1,3 @@
-'''
-lanhuage: python
-Descripttion: 
-version: beta
-Author: xiaoshuyui
-Date: 2020-06-12 09:44:19
-LastEditors: xiaoshuyui
-LastEditTime: 2021-02-19 16:45:57
-'''
 try:
     from labelme import __version__ as labelme_version
 except:
