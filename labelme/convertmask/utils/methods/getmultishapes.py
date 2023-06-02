@@ -319,6 +319,8 @@ def getNewShapes(label_img,groupid,rectpts,model,
     if len(region)>1:
         region.sort(key=len,reverse=True)
         cache=[]
+        pointcaches = []
+
         for subregion in region:
             shape = dict()
             points = []
@@ -327,6 +329,7 @@ def getNewShapes(label_img,groupid,rectpts,model,
 
                 pt = list(map(add, subregion[i][0].tolist(), [x1, y1]))
                 points.append(pt)
+                pointcaches.append(pt)
                 for x, y in [[x1, y1], [x2, y1], [x2, y2], [x1, y2]]:
                     if math.hypot(pt[0] - x, pt[1] - y) < 5:
                         skipsignal.append(i)
@@ -337,7 +340,7 @@ def getNewShapes(label_img,groupid,rectpts,model,
                                 skipsignal = []
                         break
 
-            p=Polygon(points)
+            p=Polygon(pointcaches)
             cache.append(p)
 
             shape['flags'] = {}
