@@ -2372,15 +2372,31 @@ class MainWindow(QtWidgets.QMainWindow):
         return images
 
 
+    def checkimagesize(self,image):
+        s = self.image.size().width()
+        w = image.size().width()
+        h = image.size().height()
+        if s>1920:
+            s = 1920/s
+            image = image.scaled(int(w*s),int(h*s))
+            return image, [w,h]
+        return image, None
         
     def activetrimapdrawing(self,image,points,filename=None):
 
         if filename is not None:
+            image, save = self.checkimagesize(image)
+            #rimage, save = self.checkimagesize(image)
 
             self.trimap = trimapDrawing(image, self)
 
             def loadtrimap():
+                #if save is not None:
+                    #pixmap = self.trimap.view.foreground_item.m_pixmap.scaled(save[0],save[1])
+                #pix = MatteFormer(image, pixmap)
                 pix = MatteFormer(image,self.trimap.view.foreground_item.m_pixmap)
+                if save is not None:
+                    pix = cv2.resize(pix,save)
 
                 self.canvas.mattingdict[self.canvas.groupid] = pix.copy()
                 pix[pix > 127] = 255
@@ -2419,7 +2435,7 @@ class MainWindow(QtWidgets.QMainWindow):
     def activesegdrawing(self,image,points,filename=None):
 
         if filename is not None:
-          
+            image, save = self.checkimagesize(image)
             if self.lastOpensegDir is None:
                 self.openSegDirDialog()
 
@@ -2436,6 +2452,8 @@ class MainWindow(QtWidgets.QMainWindow):
             #img.save(os.path.join(os.getcwd(),filename))
 
             pix = CtrlU2Net(image, self.seg.view.foreground_item.m_pixmap)
+            if save is not None:
+                pix = cv2.resize(pix, save)
             self.canvas.mattingdict[self.canvas.groupid] = pix.copy()
 
             pix[pix > 127] = 255
@@ -2455,4 +2473,5 @@ class MainWindow(QtWidgets.QMainWindow):
         self.seg.close_button.clicked.connect(loadseg)
         self.seg.open_dir.triggered.connect(updatesegDir)
         self.seg.show()
+ 
  
