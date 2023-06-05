@@ -184,7 +184,6 @@ class GraphicsView(QtWidgets.QGraphicsView):
             bar.setValue(int(value))
 
 
-
 class segDrawing(QtWidgets.QMainWindow):
     
     def __init__(self, filename=None, image=None, points=None, ori_size=None, parent=None):
@@ -338,6 +337,8 @@ class segDrawing(QtWidgets.QMainWindow):
             x2,y2 = self.points[1]
             pixmap = pixmap.copy(x1, y1, abs(x2 - x1), abs(y2 - y1))
 
+            if pixmap.size()!=self.image.size():
+                pixmap = pixmap.scaled(self.image.size())
             if pixmap.isNull():
                 QtWidgets.QMessageBox.information(
                     self, "Image Viewer", "Cannot load %s." % self.filename
@@ -380,6 +381,8 @@ class segDrawing(QtWidgets.QMainWindow):
     @QtCore.Slot(int)
     def onThicknessChanged(self, value):
         self.view.foreground_item.pen_thickness = value
+
+
 
 
 
