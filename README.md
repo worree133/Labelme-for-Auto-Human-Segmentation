@@ -21,7 +21,8 @@ HS-Labelme is a graphical image annotation tool based on [labelme](https://githu
 <br /> 
 <i>The fourth function "Replace Linestrip" can correct the labeling. Press Enter to confirm the corrected part.</i>
 <img src="resources/demo4.gif" width="70%" />  
-
+<i>The fifth function </i>
+<video src="resources/Labelme_function3_demo.mkv" width="70%" />  
 ## Features
 
 - [x] Auto-contouring for human segmentation
